@@ -21,7 +21,7 @@ def test_create_archive(myzip=None):
 
 def test_csv():
     with ZipFile(path_myzip) as zipfile:
-        csvfile = zipfile.extract('names.csv')
+        csvfile = zipfile.read('names.csv')
         with open(csvfile) as csvfile:
             csvfile = csv.reader(csvfile)
 
